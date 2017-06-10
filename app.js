@@ -8,7 +8,10 @@ forecast.config(function($routeProvider) {
     .when("/", {
         templateUrl : "./html/home.tpl.html"
     })
-    .when("/next", {
-        templateUrl : "./html/home.tpl.html"
+    .when("/weather", {
+        templateUrl : "./html/weather.tpl.html"
+    })
+    .when("/contacts", {
+        templateUrl : "./html/contacts.tpl.html"
     });
 });
