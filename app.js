@@ -16,8 +16,19 @@ forecast.config(function($routeProvider) {
     });
 }).factory('ForecastService', function($http){
     return {
-        getdata: function(url){
-              return $http.get(url); 
+        getJSON: function(url){
+            return $http.get(url); 
+        },
+        
+        getRequest: function(url, params){
+            return $http({
+                method: 'GET',
+                url: url,
+                params: params
+            });
         }
     };
-});
+})
+.constant('WEATHER_ID_KEY', 'city')
+.constant('KEY', 'bf60adeff8674d99bef174414172005')
+.constant('REQUEST_URL', 'https://api.apixu.com/v1/current.json');

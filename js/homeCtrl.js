@@ -1,9 +1,9 @@
 'use strict';
 
-forecast.controller('HomeCtrl', function($scope, ForecastService, $window, $location) {
+forecast.controller('HomeCtrl', function($scope, ForecastService, $window, $location, WEATHER_ID_KEY) {
     
-    ForecastService.getdata('../json/countries.json').then(function(response){
-        console.log('Counties', response.data.countries);
+    ForecastService.getJSON('../json/countries.json').then(function(response){
+        console.log('Countries', response.data.countries);
         $scope.countries = response.data.countries;
     });
     
@@ -19,7 +19,7 @@ forecast.controller('HomeCtrl', function($scope, ForecastService, $window, $loca
     };
     
     let loadCities = function(){
-         return ForecastService.getdata('../json/cities/' + $scope.selectedCountry.toLowerCase() + '-cities.json').then(function(response){
+        ForecastService.getJSON('../json/cities/' + $scope.selectedCountry.toLowerCase() + '-cities.json').then(function(response){
             console.log('Cities', response.data);
             $scope.cities = response.data;
             $scope.citiesNames = [];
@@ -30,7 +30,7 @@ forecast.controller('HomeCtrl', function($scope, ForecastService, $window, $loca
     };
     
     $scope.showTheWeather = function(){
-        $window.sessionStorage.setItem('city', $scope.selectedCity.toLowerCase());
+        $window.sessionStorage.setItem(WEATHER_ID_KEY, $scope.selectedCity.toLowerCase());
         $location.path('weather');
     };
     

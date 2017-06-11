@@ -17,7 +17,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active" id="reset-button"><a href="index.html">Back <span class="sr-only">(current)</span></a></li>
+                        <li class="active" id="reset-button"><a href="./#!/">Back <span class="sr-only">(current)</span></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="contacts.html">Contacts</a></li>
@@ -27,7 +27,7 @@
         </nav>
     </header>
     <main class="weatherMain">
-        <h2 id="mainHeader">The weather is clear</h2>
+        <h2 id="mainHeader">{{ mainHeader }}</h2>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -41,27 +41,27 @@
                         <tbody>
                             <tr>
                                 <th scope="row" class="small-th">Temperature</th>
-                                <td class="left-values" id="temperature"></td>
+                                <td class="left-values" id="temperature">{{ temp }}</td>
                             </tr>
                             <tr>
                                 <th scope="row" class="small-th">Pressure</th>
-                                <td class="left-values" id="pressure"></td>
+                                <td class="left-values" id="pressure">{{ pressure }}</td>
                             </tr>
                             <tr>
                                 <th scope="row" class="small-th">Humidity</th>
-                                <td class="left-values" id="humidity"></td>
+                                <td class="left-values" id="humidity">{{ humidity }}</td>
                             </tr>
                             <tr>
                                 <th scope="row" class="small-th">Wind</th>
-                                <td class="left-values" id="wind"></td>
+                                <td class="left-values" id="wind">{{ wind }}</td>
                             </tr>
                             <tr>
                                 <th scope="row" class="small-th">Clouds</th>
-                                <td class="left-values" id="clouds"></td>
+                                <td class="left-values" id="clouds">{{ clouds }}</td>
                             </tr>
                             <tr>
                                 <th scope="row" class="small-th">General</th>
-                                <td class="left-values" id="general"></td>
+                                <td class="left-values" id="general">{{ general }}</td>
                             </tr>
                         </tbody>
                     </table>    
