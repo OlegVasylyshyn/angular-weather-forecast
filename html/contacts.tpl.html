@@ -1,1 +1,88 @@
-<div ng-controller="ContactsCtrl">Contacts</div>
+<div ng-controller="ContactsCtrl">
+
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><strong>The Weather Forecast</strong></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active" id="reset-button"><a href="./#!/l">Back <span class="sr-only">(current)</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container" id="formDiv">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                     <div class="form-area">  
+                        <form role="form" id="contactsForm">
+                            <br>
+                            <h3>Contact Me</h3>
+            				<div class="form-group" id="nameDiv">
+        						<input type="text" class="form-control background black-placeholder" id="nameInput" name="name" placeholder="Name">
+        					</div>
+        					<div class="form-group" id="emailDiv">
+        						<input type="text" class="form-control background black-placeholder" id="email" name="email" placeholder="Email">
+        					</div>
+        					<div class="form-group" id="mobileDiv">
+        						<input type="text" class="form-control background black-placeholder" id="mobile" name="mobile" placeholder="Mobile Number">
+        					</div>
+        					<div class="form-group" id="subjectDiv">
+        						<input type="text" class="form-control background black-placeholder" id="subject" name="subject" placeholder="Subject">
+        					</div>
+                            <div class="form-group" id="messageDiv">
+                            <textarea class="form-control background black-placeholder" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+                                <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>                    
+                            </div>
+                            <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="modalWindowDiv">
+            
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Thank you</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Your message was successfully sent.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal" id="closeModel">Close</button>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>© </p>
+        </div>
+        <div id="reference">
+
+        </div>
+    </footer>
+
+</div>
