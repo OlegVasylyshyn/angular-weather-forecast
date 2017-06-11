@@ -34,4 +34,11 @@ forecast.controller('HomeCtrl', function($scope, ForecastService, $window, $loca
         $location.path('weather');
     };
     
+    $scope.reset = function(){
+        $scope.selectedCountry = null;
+        $scope.cities = null;
+        $scope.citiesNames = null;
+        $scope.selectedCity = null;
+    };
+    
 });

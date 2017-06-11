@@ -28,7 +28,7 @@ main, html {
     overflow-x: hidden;
 }
 
-main {
+.homeMain {
     padding: 100px;
     display: flex;
     justify-content: center;
