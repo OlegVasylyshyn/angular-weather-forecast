@@ -1,0 +1,19 @@
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #87CEFA;
+}
+
+main {
+    text-align: center;
+}
+
+.left-values {
+    text-align: left;
+}
+
+.small-th {
+    width: 200px;
+}
+
+table {
+    font-size: 26px;
+}

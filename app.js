@@ -1,7 +1,7 @@
 'use strict';
 
 
-let forecast = angular.module('forecast', ["ngRoute"]);
+let forecast = angular.module('forecast', ['ngRoute', 'ngAnimate']);
 forecast.config(function($routeProvider) {
     $routeProvider.otherwise({redirectTo: '/'});
     $routeProvider
@@ -14,4 +14,10 @@ forecast.config(function($routeProvider) {
     .when("/contacts", {
         templateUrl : "./html/contacts.tpl.html"
     });
+}).factory('ForecastService', function($http){
+    return {
+        getdata: function(url){
+              return $http.get(url); 
+        }
+    };
 });

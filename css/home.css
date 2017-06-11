@@ -1,0 +1,74 @@
+main, html {
+    /* JUST FOR SLIDE */
+    overflow-x: hidden;
+}
+
+#country-dropdown.animate {
+    transition: all linear 1s;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#city-dropdown.animate {
+    transition: all linear 1s;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#button-main-div.animate {
+    transition: all linear 1s;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.overflow-hidden {
+    overflow-x: hidden;
+}
+
+main {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* OVERRIDE */
+    overflow-x: visible;
+}
+
+.dropdown-toggle {
+    height: 100px;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 300px;
+}
+
+.btn {
+    font-size: 28px;
+    background-color: #87CEFA;
+}
+
+#button-div {
+    height: 100px;
+}
+
+.btn-info {
+    color: black;
+}
+
+#country-dropdown.ng-hide {
+    left: -1000px;
+}
+
+#city-dropdown.ng-hide {
+    left: 1000px;
+}
+
+#button-main-div.ng-hide {
+    left: -1000px;
+}
+
+
+

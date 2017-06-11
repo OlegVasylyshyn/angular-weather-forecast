@@ -1,7 +1,58 @@
 <div ng-controller="HomeCtrl">
-    Home
-    
-    <a href="./#!weather">Weather</a>
-    <a href="./#!contacts">Contacts</a>
-    
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><strong>The Weather Forecast</strong></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active" id="reset-button"><a href="#">Reset <span class="sr-only">(current)</span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="contacts.html">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="country-dropdown" class="center animate" ng-hide="selectedCountry" ng-click="loadCities()">
+            <h2>Choose your country</h2>
+            
+            <select id="country-select" class="selectpicker" data-live-search="true" ng-model="selectedCountry" ng-options="x for x in countries">
+            </select>
+            
+        </div>
+        <div id="city-dropdown" class="center animate" ng-hide="!selectedCountry || selectedCity">
+            <h2>Choose your city</h2>
+            
+            <select id="city-select" class="selectpicker" data-live-search="true" ng-model="selectedCity" ng-options="x for x in citiesNames">
+            </select>
+            
+        </div>
+        <div id="button-main-div" class="center animate" ng-hide="!selectedCity">
+            <h2>Here we go</h2>
+            <div id="button-div">
+                <button type="button" id="weather-button" class="btn btn-info" ng-click="showTheWeather()">Show the weather</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>© </p>
+        </div>
+        <div id="reference">
+
+        </div>
+    </footer>
 </div>
